@@ -445,6 +445,14 @@ video {
  * ;)
  */
 
+#ar-adaptive { font-size: 192px; }
+#ar-adaptive-fixed { font-size: 54px; }
+#ar-responsive { font-size: 153px; }
+#ar-responsive-fluid { font-size: 57px; }
+
+
+.step div {text-align: center; }
+
 .slide {
     display: block;
 
