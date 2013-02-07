@@ -97,6 +97,8 @@
 
 	<!-- Chang URLs to wherever Video.js files will be hosted -->
 	  <link href="video-js.css" rel="stylesheet" type="text/css">
+	<link type="text/css" rel="stylesheet" href="css/sh.css">
+	
 	  <!-- video.js must be in the <head> for older IEs to work. -->
 	  <script src="video.js"></script>
 
@@ -104,6 +106,9 @@
 	  <script>
 	    _V_.options.flash.swf = "video-js.swf";
 	  </script>
+	<script type="text/javascript" src="js/shmain.js"></script>
+	<script type="text/javascript" src="js/sh_java.js"></script>
+	
 	
 
 </head>
@@ -126,7 +131,8 @@
     it can be found later, when `hint` element is being described.
     
 -->
-<body class="impress-not-supported">
+<body class="impress-not-supported" onload="sh_highlightDocument('js/', 'sh_java.js');">
+
 
 <!--
     For example this fallback message is only visible when there is `impress-not-supported` class on body.
@@ -290,6 +296,35 @@
 
     <div id="step18" class="step" data-x="-12500" data-y="-3010" data-z="0" data-scale="0.1">
         <img src="img/ant_clutter.jpg"/>
+    </div>
+
+    <div id="step19" class="step" data-x="-13500" data-y="-3010" data-z="0" data-scale="0.1">
+	<div class="slide">
+		<pre class="sh_java">
+   products 'webserver', 'permissionkeybuilder', 'sitebuilder', 
+      'logicbuilder', 'viwebuilder', 'virtualbacview', 'wapbuilder',
+      'testnbalance' 
+   
+   dependencies { 
+       compile project(':common') 
+       compile project(':comm') 
+   } 
+   
+   doc { 
+       summary '''TBD.''' 
+   } 
+   
+   modules 'testnbalance' 
+   
+   requiresLicense false 
+   
+   launcher { 
+       mainClass 'com.controlj.green.testbalance.userinterface.Application' 
+       useJavawOnWindows true 
+       forceClientVM true 
+   }
+		</pre>
+		</div>
     </div>
 
 

@@ -452,8 +452,14 @@ video {
 #ar-responsive { font-size: 153px; }
 #ar-responsive-fluid { font-size: 57px; }
 
-
-.step div {text-align: center; }
+.big div {text-align: center; }
+.slide pre {
+	font-family: "Menlo";
+	font-size: 20px;
+	line-height: 1; 
+	background-color: #fbfbf0
+	padding: 0px 0px;    
+}
 
 #punchline1 { font-size: 130px; }
 #punchline2 { font-size: 100px; }
@@ -465,14 +471,14 @@ video {
 .slide {
     display: block;
 
-    width: 900px;
-    height: 700px;
+    width: 850px;
+    height: 550px;
 
-    padding: 40px 60px;
+    padding: 10px 5px;
 
     border-radius: 10px;
 
-    background-color: white;
+    background-color: #fbfbf0;
 
     box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
     border: 1px solid rgba(0, 0, 0, .3);
@@ -1586,44 +1592,6 @@ video {
 }
 
 
-/* ============================================================================================================================
-== RECTANGLE-BORDER STYLE WITH CURVE
-** ============================================================================================================================ */
-
-.rectangle-speech-border {
-    position:relative; 
-    padding:50px 15px; 
-    margin:1em 0 3em;
-    border:10px solid #5a8f00; 
-    text-align:center; 
-    color:#333;
-    background:#fff; 
-    /* css3 */
-    -webkit-border-radius:20px;
-    -moz-border-radius:20px;
-    border-radius:20px;
-}
-
-/* creates larger curve */
-.rectangle-speech-border:before {
-    content:""; 
-    position:absolute; 
-    z-index:10; 
-    bottom:-40px; 
-    left:50px; 
-    width:50px; 
-    height:30px;
-    border-style:solid; 
-    border-width:0 10px 10px 0; 
-    border-color:#5a8f00; 
-    background:transparent;
-    /* css3 */
-    -webkit-border-bottom-right-radius:80px 50px;
-    -moz-border-radius-bottomright:80px 50px;
-    border-bottom-right-radius:80px 50px;
-    /* reduce the damage in FF3.0 */
-    display:block; 
-}
 
 /* creates smaller curve */
 .rectangle-speech-border:after {
@@ -1671,110 +1639,6 @@ video {
     height:15px; 
     background:#fff;
 }
-
-/* ============================================================================================================================
-== OVER SPEECH BUBBLE, EMPTY, WITH BORDER (more CSS3)
-** ============================================================================================================================ */
-
-.oval-speech-border {
-    position:relative; 
-    padding:70px 30px;
-    margin:1em auto 60px;
-    border:10px solid #f3961c; 
-    text-align:center;
-    color:#333; 
-    background:#fff;
-    /* css3 */
-    /*
-    NOTES:
-    -webkit-border-radius:240px 140px; // produces oval in safari 4 and chrome 4
-    -webkit-border-radius:240px / 140px; // produces oval in chrome 4 (again!) but not supported in safari 4
-    Not correct application of the current spec, therefore, using longhand to avoid future problems with webkit corrects this
-    */
-    -webkit-border-top-left-radius:240px 140px;
-    -webkit-border-top-right-radius:240px 140px;
-    -webkit-border-bottom-right-radius:240px 140px;
-    -webkit-border-bottom-left-radius:240px 140px;
-    -moz-border-radius:240px / 140px;
-    border-radius:240px / 140px;
-}
-
-/* creates larger curve */
-.oval-speech-border:before {
-    content:""; 
-    position:absolute; 
-    z-index:2; 
-    bottom:-40px; 
-    right:50%; 
-    width:50px; 
-    height:30px;
-    border-style:solid;
-    border-width:0 10px 10px 0;
-    border-color:#f3961c;
-    margin-right:-10px;
-    background:transparent;
-    /* css3 */
-    -webkit-border-bottom-right-radius:80px 50px;
-    -moz-border-radius-bottomright:80px 50px;
-    border-bottom-right-radius:80px 50px;
-    /* reduce the damage in FF3.0 */
-    display:block; 
-}
-
-/* creates smaller curve */
-.oval-speech-border:after {
-    content:""; 
-    position:absolute; 
-    z-index:2; 
-    bottom:-40px; 
-    right:50%; 
-    width:20px; 
-    height:31px; 
-    border-style:solid;
-    border-width:0 10px 10px 0;
-    border-color:#f3961c;
-    margin-right:20px;
-    background:transparent;
-    /* css3 */
-    -webkit-border-bottom-right-radius:40px 50px; 
-    -moz-border-radius-bottomright:40px 50px; 
-    border-bottom-right-radius:40px 50px; 
-    /* reduce the damage in FF3.0 */
-    display:block; 
-}
-
-/* creates a small circle to produce a rounded point where the two curves meet */
-.oval-speech-border > :first-child:before {
-    content:""; 
-    position:absolute; 
-    z-index:1; 
-    bottom:-40px; 
-    right:50%; 
-    width:10px; 
-    height:10px;
-    margin-right:45px;
-    background:#f3961c;
-    /* css3 */
-    -webkit-border-radius:10px;
-    -moz-border-radius:10px;
-    border-radius:10px;
-}
-
-/* creates a white rectangle to cover part of the oval border*/
-.oval-speech-border > :first-child:after {
-    content:""; 
-    position:absolute; 
-    z-index:1; 
-    bottom:-10px; 
-    right:50%; 
-    width:30px; 
-    height:15px; 
-    background:#fff;
-}
-
-/* ============================================================================================================================
-== OVER THOUGHT BUBBLE, EMPTY, WITH BORDER (more CSS3)
-** ============================================================================================================================ */
 
 .oval-thought-border {
     position:relative; 
