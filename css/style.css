@@ -106,6 +106,7 @@ blockquote .author {
 
 .step:not(.active) { opacity: 0.1; }
 
+#step opacity: 0.1; }
 
 /* STEP SPECIFIC STYLES */
 #title {width: 1240px; height: 600px; text-align: left; }
