@@ -61,6 +61,10 @@ a:hover { color: #333;}
 .extralight { font-weight: 300; letter-spacing: .1em; }
 .small { display: block; padding: 20px; font-size: 20px; font-weight: 600; }
 
+.bc {
+    display: block; padding: 20px; font-size: 32px; font-weight: 800;    
+}
+
 blockquote {
     text-align: justify;
     font-weight: 300;
@@ -102,6 +106,34 @@ blockquote .author {
     transition:         opacity 1s;
     
     text-shadow: rgba(0,0,0,.01) 0 0 1px; /* Chrome @font-face anti-aliasing fix */
+}
+
+.businesscard {
+    text-align: center;
+    width: 1000px;
+    padding: 20px;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    -ms-box-sizing:     border-box;
+    -o-box-sizing:      border-box;
+    box-sizing:         border-box;
+    
+    -webkit-transition: opacity 1s;
+    -moz-transition:    opacity 1s;
+    -ms-transition:     opacity 1s;
+    -o-transition:      opacity 1s;
+    transition:         opacity 1s;
+    
+    text-shadow: rgba(0,0,0,.01) 0 0 1px; /* Chrome @font-face anti-aliasing fix */
+
+    margin:0 0;
+    padding:0 0;
+    background-image:url(img/gradleware.png) no-repeat;
+    background-size: 1082px 767px, 1024px 662px;
+    background-origin:padding-box, content-box;
+    background-repeat:no-repeat, no-repeat;
+    background-position:top left, top left;
 }
 
 .step:not(.active) { opacity: 0.1; }

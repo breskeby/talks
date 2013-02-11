@@ -58,7 +58,6 @@ table {
     border-spacing: 0;
 }
 
-
 .background {
 	position: fixed;
 	height: 100%;
@@ -134,6 +133,7 @@ body     { pointer-events: none; }
     transition:         opacity 1s;
 }
 
+
 .title { font-size: 275px; }
 .big { text-transform: uppercase; margin: 0; padding: 0; }
 .bold { font-weight: 800; }
@@ -143,9 +143,12 @@ body     { pointer-events: none; }
 .light-red {text-align: left;
             font-weight: 400; color:#BE2F33;}
 
+.bc {
+    display: block; padding: 20px; font-size: 30px; font-weight: 800; color: #FFFFFF;    
+}
 /* fade out inactive slides */
 .step:not(.active) {
-    opacity: 0.0;
+    opacity: 0.3;
 }
 
 /*
@@ -480,6 +483,7 @@ video {
 
     background-color: #fbfbf0;
 
+
     box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
     border: 1px solid rgba(0, 0, 0, .3);
 
@@ -492,6 +496,21 @@ video {
     line-height: 36px;
 
     letter-spacing: -1px;
+}
+
+.simpleslide {
+        padding: 25px 25px;    
+}
+
+#businesscard{
+    text-align: bottom;
+    background: url(../img/gradleware_850.png) no-repeat fixed;
+
+}
+
+#businesscard div{
+    padding: 360px 50px;
+
 }
 
 .slide q {
