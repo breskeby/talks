@@ -1,0 +1,63 @@
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'org.asciidoctor:asciidoctor-gradle-plugin:1.5.3'
+        classpath 'com.github.jruby-gradle:jruby-gradle-plugin:0.4.0'
+        classpath 'org.ysb33r.gradle:vfs-gradle-plugin:1.0-beta3'
+        classpath 'commons-httpclient:commons-httpclient:3.1'
+        classpath 'org.ajoberstar:gradle-git:1.1.0'
+        classpath 'io.ratpack:ratpack-groovy:1.2.0'
+    }
+}
+
+
+apply plugin:'base'
+
+apply plugin: 'com.github.jruby-gradle.base'
+apply plugin: 'org.ysb33r.vfs'
+apply plugin: 'org.asciidoctor.convert'
+
+dependencies {
+    gems 'rubygems:slim:2.1.0'
+    gems 'rubygems:thread_safe:0.3.4'
+}
+
+
+task allAsciidoctor{
+    subprojects{ sub ->
+        pluginManager.withPlugin("org.asciidoctor.convert"){
+            dependsOn sub.tasks.asciidoctor
+        }
+    }
+}
+
+task generateGithubPages(type:Copy){
+    into "pages/talks"
+    dependsOn tasks.asciidoctor
+    subprojects{ sub ->
+        pluginManager.withPlugin("org.asciidoctor.convert"){
+            from(sub.tasks.asciidoctor){
+                into sub.name
+                exclude "reveal.js"
+            }
+        }
+    }
+}
+
+asciidoctorj.noDefaultRepositories = true
+
+asciidoctor {
+    backends = ['html5'] // 'pdf' can be produced too
+
+    outputDir = file("pages/overview")
+    attributes = ['source-highlighter': 'coderay', toc: '', toclevels: 3, idprefix: '', idseparator: '-', imagesdir:"../img"]
+}
+
+clean {
+    delete "pages"
+    delete "index.html"
+}
