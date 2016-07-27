@@ -1,10 +1,18 @@
+
 import org.gradle.api.plugins.ApplicationPlugin
-import org.gradle.script.lang.kotlin.apply
-import org.gradle.script.lang.kotlin.dependencies
-import org.gradle.script.lang.kotlin.repositories
-import org.gradle.script.lang.kotlin.testCompile
+import org.gradle.api.plugins.ApplicationPluginConvention
+import org.gradle.api.tasks.Copy
+import org.gradle.script.lang.kotlin.*
 
 apply<ApplicationPlugin>()
+
+configure<ApplicationPluginConvention>(){
+    mainClassName = "samples.HelloWorld"
+}
+
+task<Copy>("someCopy"){
+    from()
+}
 
 repositories {
     jcenter()
