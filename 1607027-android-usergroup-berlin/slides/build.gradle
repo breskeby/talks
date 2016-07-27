@@ -12,7 +12,6 @@ buildscript {
         classpath 'org.ajoberstar:gradle-git:1.1.0'
         classpath 'io.ratpack:ratpack-groovy:1.2.0'
     }
-
 }
 
 repositories {

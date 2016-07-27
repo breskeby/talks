@@ -1,0 +1,2 @@
+include ':1607027-android-usergroup-berlin'
+project(':1607027-android-usergroup-berlin').projectDir = file('1607027-android-usergroup-berlin/slides')
