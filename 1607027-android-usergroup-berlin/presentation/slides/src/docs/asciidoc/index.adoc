@@ -1,0 +1,156 @@
+= Gradle 3.0 for Android Devs
+René Gröschke (@breskeby), Gradle Inc.
+2016-04-22
+:revnumber: {project-version}
+:example-caption!:
+ifndef::imagesdir[:imagesdir: images]
+ifndef::sourcedir[:sourcedir: ../java]
+:deckjs_transition: fade
+:navigation:
+:menu:
+:status:
+:adoctor: http://asciidoctor.org/[Asciidoctor]
+:gradle: http://gradle.org[Gradle]
+
+[data-background="images/berlin4.jpg"]
+== Who am I
+
+++++
+<style>
+.asciinema-terminal.font-medium {
+  font-size: 16px;
+}
+</style>
+
+<div class="pictureWrapper">
+   <div class="picture"><img src="images/me-cropped.png"></div>
+</div>
+++++
+
+
+[source,groovy]
+----
+speaker {
+    name 'René Gröschke'
+    work 'Principal Engineer @ Gradle Inc.'
+    twitter '@breskeby'
+    github 'breskeby'
+    email 'rene@gradle.com'
+}
+----
+
+[data-background="images/puzzle.jpg"]
+
+== No big bang release
+
+* 3.0-milestone-2 available for testing now
+* 3.0-rc-1 likely being released tomorrow
+
+== Continuous Builds
+
+- monitors task inputs / outputs
+- triggers rebuild if any of both has changed
+
+[source]
+----
+gradle build -t
+----
+
+[NOTE.speaker]
+--
+- using it internally
+- linkedin preparing ide + gradle integration to not need user to call gradle manually again
+--
+
+== Performance is a feature
+
+image::end-long-build-times.png[align="center"]
+
+=== Dedicated Performance Burst
+
+* latest Gradle 2.14.1 is the fastest Gradle ever
+* reduced configuration time
+* faster script compilation
+* faster up-to-date checks
+* faster test execution
+* faster ide integration
+* ongoing effort
+
+=== Configuration time speedup
+
+image::reduced-configuration-time.png[align="center"]
+
+=== Test execution speedup
+
+image::gradle-vs-maven-cleanTest-test.png[align="center"]
+
+=== Gradle daemon
+
+* Who's using the daemon?
+* A long-lived background process
+* Avoids costly jvm bootstrapping
+* Benefits from warmed up hotspot compilation
+
+=== Gradle daemon
+
+[source,text]
+----
+# ~/.gradle/gradle.properties
+org.gradle.daemon=true
+----
+
+=== More daemon goodness
+
+* More robust by
+** Dealing better with memory leaks
+** Having clever expiration strategies
+* Use case parity with no daemon mode
+* More communicative
+* Leveraging daemon more in the future
+* On by default in 3.0
+
+[%notitle]
+[data-background="images/kotlinisland.jpg"]
+== Kotlin Gradle DSL
+
+[data-background="images/summit-kotlin.png"]
+=== Kotlin Gradle DSL
+
+== Introducing Gradle Build Scans
+
+[cols="50a,50a"]
+|===
+|
+* Insights into your build
+* View and share via URL
+* Debug, optimize and refine
+* Analyze all of your builds
+|image:build-scans.png[]
+|===
+
+[NOTE.speaker]
+--
+- working closely with android team to add android specific stuff
+--
+
+[%notitle]
+[data-background="images/questions.jpg"]
+== Questions
+
+== Thank you!
+
+* Slides and code : https://github.com/breskeby/android-usergroup-berlin-gradlethree
+* Gradle documentation : http://gradle.org/documentation/
+* Gradle Build Scans : https://gradle.com
+* Sample Build Scan: https://scans.gradle.com/s/6mjjoq6hwr7kk
+* Follow me: http://twitter.com/breskeby[@breskeby]
+
+== Gradle Inc
+
+*Motto*: Build Happiness
+
+*Mission*: To revolutionize the way
+
+software is built and shipped. We exist to end once-and-for-all the worst things about big software and restore the reason you got into coding in the first place.
+
+*We’re Hiring*: Gradle is hiring front-end, back-end, and core software engineers. Visit https://gradle.org/jobs[gradle.org/jobs] to apply.
