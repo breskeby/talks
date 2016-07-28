@@ -42,7 +42,6 @@ task generateGithubPages(type:Copy){
         pluginManager.withPlugin("org.asciidoctor.convert"){
             from(sub.tasks.asciidoctor){
                 into sub.name
-                exclude "reveal.js"
             }
         }
     }
