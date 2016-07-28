@@ -9,11 +9,11 @@ function doBuild {
 }
 
 # Pull requests and commits to other branches shouldn't try to deploy, just build to verify
-if [ "$TRAVIS_PULL_REQUEST" != "false" -o "$TRAVIS_BRANCH" != "$SOURCE_BRANCH" ]; then
-    echo "Skipping deploy; just doing a build."
-    doBuild
-    exit 0
-fi
+#if [ "$TRAVIS_PULL_REQUEST" != "false" -o "$TRAVIS_BRANCH" != "$SOURCE_BRANCH" ]; then
+#    echo "Skipping deploy; just doing a build."
+#    doBuild
+#    exit 0
+#fi
 
 # Save some useful information
 REPO=`git config remote.origin.url`
@@ -33,7 +33,7 @@ git config user.email "$COMMIT_AUTHOR_EMAIL"
 
 # If there are no changes to the compiled out (e.g. this is a README update) then just bail.
 CHANGED=$(git status --porcelain)
-if [ -n "${CHANGED}" ]; then
+if ! [ -n "${CHANGED}" ]; then
     echo "No changes to the output on this push; exiting."
     exit 0
 fi
