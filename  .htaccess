@@ -1,2 +1,2 @@
 RewriteEngine on
-RewriteRule index\.html pages/overview/html5/index.html [NC,R]
+RewriteRule index\.html pages/overview/html5/overview.html [NC,R]
