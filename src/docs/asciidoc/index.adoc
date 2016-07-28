@@ -2,7 +2,7 @@
 
 A list of presentations I gave at different conferences and user groups.
 
-I'm currently in the process of automating the deployment based on gh-pages & travis-ci. So be patient if a specific talk is not here yet or just ping me.
+I'm currently in the process of automating the deployment based on gradle, gh-pages & travis-ci. So be patient if a specific talk is not here yet or just ping me.
 
 ++++
 <link rel="stylesheet"  href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.1.0/css/font-awesome.min.css">
