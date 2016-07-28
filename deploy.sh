@@ -32,13 +32,15 @@ git config user.name "Travis CI"
 git config user.email "$COMMIT_AUTHOR_EMAIL"
 
 # If there are no changes to the compiled out (e.g. this is a README update) then just bail.
-if [ -z `git diff --exit-code` ]; then
+CHANGED=$(git status --porcelain)
+if [ -n "${CHANGED}" ]; then
     echo "No changes to the output on this push; exiting."
     exit 0
 fi
 
 # fetch target branch
 git fetch origin $TARGET_BRANCH
+git checkout origin $TARGET_BRANCH
 
 # Commit the "changes", i.e. the new version.
 # The delta will show diffs between new and old versions.
