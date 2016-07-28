@@ -37,6 +37,9 @@ if [ -z `git diff --exit-code` ]; then
     exit 0
 fi
 
+# fetch target branch
+git fetch origin $TARGET_BRANCH
+
 # Commit the "changes", i.e. the new version.
 # The delta will show diffs between new and old versions.
 git add .
