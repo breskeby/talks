@@ -154,7 +154,7 @@ org.gradle.daemon=true
 
 == Thank you!
 
-* Slides and code : https://github.com/breskeby/talks/tree/master/1607027-android-usergroup-berlin
+* Slides and code : https://github.com/breskeby/talks/tree/master/160727-android-usergroup-berlin
 * Gradle documentation : http://gradle.org/documentation/
 * Gradle Build Scans : https://gradle.com
 * Sample Build Scan: https://scans.gradle.com/s/6mjjoq6hwr7kk
