@@ -39,7 +39,7 @@ if ! [ -n "${CHANGED}" ]; then
 fi
 
 # fetch target branch
-git fetch
+git fetch --all
 git remote update
 # Commit the "changes", i.e. the new version.
 # The delta will show diffs between new and old versions.
@@ -47,7 +47,8 @@ git add .
 git commit -m "Deploy to GitHub Pages: ${SHA}"
 cd ..
 
-git checkout -b $TARGET_BRANCH origin/$TARGET_BRANCH
+git branch $TARGET_BRANCH origin/$TARGET_BRANCH
+git checkout $TARGET_BRANCH
 git rebase master -X theirs
 
 # Get the deploy key by using Travis's stored variables to decrypt deploy_key.enc
