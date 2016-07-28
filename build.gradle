@@ -27,7 +27,7 @@ dependencies {
 }
 
 
-task allAsciidoctor{
+task allAsciidoctor {
     subprojects{ sub ->
         pluginManager.withPlugin("org.asciidoctor.convert"){
             dependsOn sub.tasks.asciidoctor
@@ -35,7 +35,7 @@ task allAsciidoctor{
     }
 }
 
-task pages(type:Copy){
+task pages(type:Copy) {
     into "gh-pages"
     dependsOn tasks.asciidoctor
 
