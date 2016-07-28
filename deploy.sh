@@ -39,13 +39,17 @@ if ! [ -n "${CHANGED}" ]; then
 fi
 
 # fetch target branch
-git fetch origin
+git fetch origin gh-pages-trial
 
 # Commit the "changes", i.e. the new version.
 # The delta will show diffs between new and old versions.
 git add .
 git commit -m "Deploy to GitHub Pages: ${SHA}"
 cd ..
+
+git checkout -b $TARGET_BRANCH --track origin/$TARGET_BRANCH
+git rebase master -X theirs
+
 # Get the deploy key by using Travis's stored variables to decrypt deploy_key.enc
 ENCRYPTED_KEY_VAR="encrypted_${ENCRYPTION_LABEL}_key"
 ENCRYPTED_IV_VAR="encrypted_${ENCRYPTION_LABEL}_iv"
@@ -57,4 +61,4 @@ eval `ssh-agent -s`
 ssh-add deploy_key
 
 # Now that we're all set up, we can push.
-git push $SSH_REPO origin/$TARGET_BRANCH
+git push $SSH_REPO origin $TARGET_BRANCH
