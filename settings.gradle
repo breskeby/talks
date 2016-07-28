@@ -1,2 +1,6 @@
-include ':1607027-android-usergroup-berlin'
-project(':1607027-android-usergroup-berlin').projectDir = file('1607027-android-usergroup-berlin/slides')
+def talks = ['160727-android-usergroup-berlin']
+talks.each { talk ->
+    def projectPath = ":$talk"
+    include projectPath
+    project(projectPath).projectDir = file("$talk/slides")
+}

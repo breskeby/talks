@@ -6,4 +6,4 @@
 
 :icons: font
 
-* link:1607027-android-usergroup-berlin/index.html[Gradle 3.0 talk at Android User Group Berlin (27.07.16)]
+* link:160727-android-usergroup-berlin/index.html[Gradle 3.0 talk at Android User Group Berlin (27.07.16)]
