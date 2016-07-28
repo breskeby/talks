@@ -39,15 +39,15 @@ if ! [ -n "${CHANGED}" ]; then
 fi
 
 # fetch target branch
-git fetch origin gh-pages-trial
-
+git fetch
+git remote update
 # Commit the "changes", i.e. the new version.
 # The delta will show diffs between new and old versions.
 git add .
 git commit -m "Deploy to GitHub Pages: ${SHA}"
 cd ..
 
-git checkout -b $TARGET_BRANCH --track origin/$TARGET_BRANCH
+git checkout -b $TARGET_BRANCH origin/$TARGET_BRANCH
 git rebase master -X theirs
 
 # Get the deploy key by using Travis's stored variables to decrypt deploy_key.enc
