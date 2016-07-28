@@ -39,8 +39,10 @@ if ! [ -n "${CHANGED}" ]; then
 fi
 
 # fetch target branch
-git fetch --all
 git remote update
+git fetch origin
+git fetch --all
+git branch -r
 # Commit the "changes", i.e. the new version.
 # The delta will show diffs between new and old versions.
 git add .
