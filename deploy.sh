@@ -51,7 +51,7 @@ git commit -m "Deploy to GitHub Pages: ${SHA}"
 cd ..
 
 git checkout -b $TARGET_BRANCH
-git pull --rebase origin $TARGET_BRANCH -s recursive -X theirs
+git merge origin/$TARGET_BRANCH -s recursive -X theirs
 git rebase master -s recursive -X theirs
 
 # Get the deploy key by using Travis's stored variables to decrypt deploy_key.enc
