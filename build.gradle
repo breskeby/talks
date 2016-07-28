@@ -35,9 +35,12 @@ task allAsciidoctor{
     }
 }
 
-task generateGithubPages(type:Copy){
-    into "pages/talks"
+task pages(type:Copy){
+    into "gh-pages"
     dependsOn tasks.asciidoctor
+
+    from "build/asciidoctor/html5"
+
     subprojects{ sub ->
         pluginManager.withPlugin("org.asciidoctor.convert"){
             from(sub.tasks.asciidoctor){
@@ -52,11 +55,10 @@ asciidoctorj.noDefaultRepositories = true
 asciidoctor {
     backends = ['html5'] // 'pdf' can be produced too
 
-    outputDir = file("pages/overview")
+    outputDir = file("build/asciidoctor")
     attributes = ['source-highlighter': 'coderay', toc: '', toclevels: 3, idprefix: '', idseparator: '-', imagesdir:"../img"]
 }
 
 clean {
-    delete "pages"
-    delete "index.html"
+    delete "gh-pages"
 }

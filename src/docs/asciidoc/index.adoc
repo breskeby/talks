@@ -1,11 +1,9 @@
 = Presentations
 
-:sectnums:
-
 ++++
 <link rel="stylesheet"  href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.1.0/css/font-awesome.min.css">
 ++++
 
 :icons: font
 
-== Talks I provided at conferences and different user groups
+* link:1607027-android-usergroup-berlin/index.html[Gradle 3.0 talk at Android User Group Berlin (27.07.16)]
