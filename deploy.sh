@@ -40,8 +40,6 @@ fi
 
 # fetch target branch
 git remote update
-git fetch origin
-git fetch --all
 git fetch origin $TARGET_BRANCH
 git branch -r
 # Commit the "changes", i.e. the new version.
@@ -50,8 +48,7 @@ git add .
 git commit -m "Deploy to GitHub Pages: ${SHA}"
 cd ..
 
-git checkout -b $TARGET_BRANCH
-git merge origin/$TARGET_BRANCH -s recursive -X theirs
+git checkout $TARGET_BRANCH
 git rebase master -s recursive -X theirs
 
 # Get the deploy key by using Travis's stored variables to decrypt deploy_key.enc
