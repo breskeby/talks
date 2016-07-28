@@ -39,8 +39,8 @@ if ! [ -n "${CHANGED}" ]; then
 fi
 
 # fetch target branch
-git fetch origin $TARGET_BRANCH
-git checkout origin $TARGET_BRANCH
+git fetch origin
+git checkout -b $TARGET_BRANCH origin/$TARGET_BRANCH
 
 # Commit the "changes", i.e. the new version.
 # The delta will show diffs between new and old versions.
