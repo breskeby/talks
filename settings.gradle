@@ -1,4 +1,4 @@
-def talks = ['160727-android-usergroup-berlin']
+def talks = ['160727-android-usergroup-berlin', '161016-jokerconf-stp']
 talks.each { talk ->
     def projectPath = ":$talk"
     include projectPath

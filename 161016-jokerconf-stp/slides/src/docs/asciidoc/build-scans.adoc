@@ -1,0 +1,18 @@
+== Introducing Gradle Build Scans
+
+[cols="50a,50a"]
+|===
+|
+* Insights into your build
+* View and share via URL
+* Debug, optimize and refine
+* Communicate via builds
+* Analyze all of your builds
+
+|image:build-scans.png[]
+|===
+
+[NOTE.speaker]
+--
+- working closely with android team to add android specific stuff
+--

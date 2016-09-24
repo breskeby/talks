@@ -1,0 +1,13 @@
+== Composite Builds
+
+|image:composite-builds-disrupting.png[]
+
+=== Composite Builds
+
+[source]
+----
+> gradle --include-build ../my-utils run
+----
+
+=== Composite Builds
+Demo

@@ -1,0 +1,42 @@
+== Task output  cache
+
+=== We are reusing results…
+
+from *last time*  +
+when we ran *this build* +
+ on *this machine*. +
+
+=== We can do better
+
+=== Why not...
+
+from *anytime before*  +
+when we ran *any build* +
+ *anywhere*. +
+
+=== Task output cache in Action
+
+[%step]
+[source,text]
+----
+> gradle clean logging:assemble
+...
+:native:classpathManifest
+:native:compileJava CACHED
+:native:compileGroovy UP-TO-DATE
+:native:processResources UP-TO-DATE
+:native:classes
+:native:jar CACHED
+:logging:compileJava CACHED
+:logging:compileGroovy UP-TO-DATE
+:logging:processResources UP-TO-DATE
+:logging:classes
+:logging:jar CACHED
+:logging:assemble UP-TO-DATE
+
+BUILD SUCCESSFUL
+----
+
+=== Task output cache in Action
+
+Demo

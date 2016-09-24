@@ -1,0 +1,15 @@
+== Continuous Builds
+
+- Monitors task inputs / outputs
+- Triggers rebuild if any of both has changed
+
+[source]
+----
+gradle biuld -t
+----
+
+[NOTE.speaker]
+--
+- Using it internally
+- Linkedin preparing ide + gradle integration to not need user to call gradle manually again
+--
