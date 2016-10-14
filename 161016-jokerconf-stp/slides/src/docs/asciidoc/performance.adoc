@@ -1,4 +1,4 @@
-== Whose build is to fast?
+== Whose build is too fast?
 
 === Performance is a feature
 
