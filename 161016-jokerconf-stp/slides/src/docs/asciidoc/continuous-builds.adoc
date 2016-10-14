@@ -1,4 +1,4 @@
-== Typical Developer Workflow
+== A typical developer workflow
 
 1. Edit codebase
 2. Run a build
