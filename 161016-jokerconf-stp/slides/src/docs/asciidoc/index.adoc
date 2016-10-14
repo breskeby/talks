@@ -1,6 +1,4 @@
 = Gradle 3.0 and beyond
-René Gröschke (@breskeby), Gradle Inc.
-2016-04-22
 :revnumber: {project-version}
 :example-caption!:
 ifndef::imagesdir[:imagesdir: images]
@@ -98,15 +96,6 @@ include::build-scans.adoc[]
 * First class Java 9 Support (Jigsaw)
 * Distributed Cache
 * Ongoing dedicated performance work
-
-== What is Gradle?
-
-=== EMERGE FROM BUILD HELL
-
-* Unified, fast, reproducible builds
-* Cross-platform
-* Language agnostic
-* A Build Tool + Cloud Services + *Community*
 
 == Gradle Inc
 

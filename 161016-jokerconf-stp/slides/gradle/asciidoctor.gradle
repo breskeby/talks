@@ -52,9 +52,6 @@ asciidoctor {
         def html = new File("$buildDir/asciidoc/revealjs/index.html")
         def fixed = html.text.replace('<section><h1>', '<section data-background="images/summit-intro.png"><h1>')
         fixed = fixed.replace('<h1>Gradle 3.0 and beyond</h1>', '<div id="front-top">Jokerconf 16</div><div id="front-title">Gradle 3.0 and beyond</div><div id="front-date">René Gröschke</div>')
-        fixed = fixed.replace('<p><small>René Gröschke (@breskeby), Gradle Inc.</small></p>', '')
         html.withWriter('utf-8') { it.write fixed }
     }
-
-
 }

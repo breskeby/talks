@@ -1,10 +1,11 @@
-== Gradle TestKit
+== TDD anybody?
+
+=== Gradle TestKit
 
 Functional testing of your build logic
 
 [source,java]
 ----
-
 apply plugin: 'groovy'
 
 repositories {

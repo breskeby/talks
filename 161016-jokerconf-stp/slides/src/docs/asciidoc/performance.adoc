@@ -1,4 +1,6 @@
-== Performance is a feature
+== Whose build is to fast?
+
+=== Performance is a feature
 
 image::end-long-build-times.png[align="center"]
 

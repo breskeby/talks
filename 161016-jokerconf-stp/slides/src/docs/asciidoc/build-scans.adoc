@@ -9,7 +9,7 @@
 * Communicate via builds
 * Analyze all of your builds
 
-|image:build-scans.png[]
+|image:sample-scan.png[]
 |===
 
 [NOTE.speaker]

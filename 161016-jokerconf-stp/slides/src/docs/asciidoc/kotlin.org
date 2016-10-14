@@ -3,12 +3,12 @@
 
 image::kotlinisland.jpg[canvas, size=cover]
 
-=== Four facts about Kotlin
+=== 4 facts about Kotlin
 
-* Statically typed JVM language
-* Driven by pragmatism
-* Deep support in Idea and Eclipse IDEs
-* Allows declarative syntax for crafting DSL with ease.
+- Statically typed JVM language
+- Developed by Jetbrains
+- Driven by pragmatism
+- Deep support in Idea and Eclipse IDEs
 
 === Kotlin sample
 

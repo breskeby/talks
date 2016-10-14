@@ -1,6 +1,8 @@
-== Task output  cache
+== Incremental Gradle Builds
+- Task up-to-date check been there forever
+- Relies on tasks inputs/outputs model
 
-=== We are reusing results…
+=== We are reusing results...
 
 from *last time*  +
 when we ran *this build* +
@@ -14,7 +16,7 @@ from *anytime before*  +
 when we ran *any build* +
  *anywhere*. +
 
-=== Task output cache in Action
+=== Task output cache
 
 [%step]
 [source,text]
