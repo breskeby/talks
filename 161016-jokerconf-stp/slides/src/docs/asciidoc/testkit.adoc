@@ -1,5 +1,7 @@
 == TDD anybody?
 
+=== Ambitious automation can get complex
+
 === Gradle TestKit
 
 Functional testing of your build logic

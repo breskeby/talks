@@ -29,11 +29,12 @@ ifndef::sourcedir[:sourcedir: ../java]
 ----
 speaker {
     name 'René Gröschke'
+    homebase 'Berlin, Germany'
     work 'Principal Engineer @ Gradle Inc.'
     twitter '@breskeby'
     github 'breskeby'
     email 'rene@gradle.com'
-    hobbies 'nobody cares...'
+    hobbies '...'
 }
 ----
 
@@ -74,6 +75,7 @@ task printVersion << { println "We're using - version '$version'!" }
 
 * 3.0 released on August 15th 2016
 * 3.1 released on September 19th 2016
+* 3.2 RC-1 to be expected next week
 * Releasing every 4 - 6 weeks.
 
 include::continuous-builds.adoc[]
@@ -90,12 +92,12 @@ include::task-output-cache.adoc[]
 
 include::build-scans.adoc[]
 
-
 == What's next
 
 * First class Java 9 Support (Jigsaw)
 * Distributed Cache
 * Ongoing dedicated performance work
+* Ongoing Buildship (Eclipse plugin) improvements
 
 == Gradle Inc
 

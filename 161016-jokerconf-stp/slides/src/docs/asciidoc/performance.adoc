@@ -24,13 +24,12 @@ image::gradle-vs-maven-cleanTest-test.png[align="center"]
 
 === Gradle daemon
 
-* Who's using the daemon?
 * A long-lived background process
 * Avoids costly jvm bootstrapping
 * Benefits from warmed up hotspot compilation
 
 === More daemon goodness
-* On by default in 3.0
+* On by default since 3.0
 * More robust by
 ** Dealing better with memory leaks
 ** Having clever expiration strategies
