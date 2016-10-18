@@ -1,0 +1,120 @@
+= Gradle 3.0 and beyond
+:revnumber: {project-version}
+:example-caption!:
+ifndef::imagesdir[:imagesdir: images]
+ifndef::sourcedir[:sourcedir: ../java]
+:deckjs_transition: fade
+:navigation:
+:menu:
+:status:
+:adoctor: http://asciidoctor.org/[Asciidoctor]
+:gradle: http://gradle.org[Gradle]
+
+== Who am I
+
+++++
+<style>
+.asciinema-terminal.font-medium {
+  font-size: 16px;
+}
+</style>
+
+<div class="pictureWrapper">
+   <div class="picture"><img src="images/me-cropped.png"></div>
+</div>
+++++
+
+
+[source,groovy]
+----
+speaker {
+    name 'René Gröschke'
+    homebase 'Berlin, Germany'
+    work 'Principal Engineer @ Gradle Inc.'
+    twitter '@breskeby'
+    github 'breskeby'
+    email 'rene@gradle.com'
+    hobbies '...'
+}
+----
+
+[data-background="images/puzzle.jpg"]
+
+== What is Gradle?
+
+=== EMERGE FROM BUILD HELL
+
+* Unified, fast, reproducible builds
+* Cross-platform
+* Language agnostic
+* A Build Tool + Cloud Services
+
+=== In a nutshell
+
+A simple java project
+
+[source,java]
+----
+apply plugin:"java"
+
+version = file("version.txt").text
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    testCompile "junit:junit:4.+"
+}
+
+task printVersion << { println "We're using - version '$version'!" }
+----
+
+
+== No big bang release
+
+* 3.0 released on August 15th 2016
+* 3.1 released on September 19th 2016
+* 3.2 RC-1 to be expected next week
+* Releasing every 4 - 6 weeks.
+
+include::continuous-builds.adoc[]
+
+include::testkit.adoc[]
+
+include::performance.adoc[]
+
+include::kotlin.adoc[]
+
+include::composite-builds.adoc[]
+
+include::task-output-cache.adoc[]
+
+include::build-scans.adoc[]
+
+== What's next
+
+* First class Java 9 Support (Jigsaw)
+* Distributed Cache
+* Ongoing dedicated performance work
+* Ongoing Buildship (Eclipse plugin) improvements
+
+== Gradle Inc
+
+*Motto*: Build Happiness
+
+*Mission*: To revolutionize the way software is built and shipped.
+
+*We’re Hiring*: Gradle is hiring front-end, back-end, and core software engineers. Visit https://gradle.org/jobs[gradle.org/jobs] to apply.
+
+[%notitle]
+== Questions
+image::questions.jpg[canvas, size=cover]
+
+== Thank you!
+
+* Slides and code : https://github.com/breskeby/talks/tree/master/161010-jokercon-stp
+* Gradle documentation : http://gradle.org/documentation/
+* Gradle Build Scans : https://gradle.com
+* Sample Build Scan: https://scans.gradle.com/s/6mjjoq6hwr7kk
+* Follow me: http://twitter.com/breskeby[@breskeby]

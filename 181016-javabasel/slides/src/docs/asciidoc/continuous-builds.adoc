@@ -1,0 +1,29 @@
+== A typical developer workflow
+
+1. Edit codebase
+2. Run a build
+3. Examine outputs
+4. Edit codebase
+5. Run a build
+6. Examine outputs
+7. Edit...
+8. Ru...
+9. ...
+
+=== Let's have some automation for this
+
+=== Continuous Builds
+- Monitors task inputs / outputs
+- Triggers rebuild if any of both has changed
+- Provides fast feedback loop
+
+[source]
+----
+gradle build -t
+----
+
+[NOTE.speaker]
+--
+- Using it internally
+- Linkedin preparing ide + gradle integration to not need user to call gradle manually again
+--
