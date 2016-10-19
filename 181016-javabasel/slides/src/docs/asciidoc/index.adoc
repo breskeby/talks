@@ -113,8 +113,8 @@ image::questions.jpg[canvas, size=cover]
 
 == Thank you!
 
-* Slides and code : https://github.com/breskeby/talks/tree/master/161010-jokercon-stp
+* Slides and code : https://github.com/breskeby/talks/tree/master/181016-javabasel
 * Gradle documentation : http://gradle.org/documentation/
 * Gradle Build Scans : https://gradle.com
-* Sample Build Scan: https://scans.gradle.com/s/6mjjoq6hwr7kk
+* Sample Gradle Build Scan: https://scans.gradle.com/s/53ttaumarrtog
 * Follow me: http://twitter.com/breskeby[@breskeby]
