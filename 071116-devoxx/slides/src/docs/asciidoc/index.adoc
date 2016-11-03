@@ -18,6 +18,10 @@ ifndef::sourcedir[:sourcedir: ../java]
   font-size: 16px;
 }
 </style>
+
+<div class="pictureWrapper">
+   <div class="picture"><img src="images/me-cropped.png"></div>
+</div>
 ++++
 
 
@@ -33,6 +37,21 @@ speaker {
     hobbies '...'
 }
 ----
+
+== We'll look into
+
+- Writing Gradle scripts with a Kotlin DSL
+
+Not so much into
+
+ - Building Kotlin projects with Gradle
+ - Writing Gradle plugins with Kotlin
+
+
+include::gradle-dsl.adoc[]
+
+
+=== EMERGE FROM BUILD HELL
 
 [data-background="images/puzzle.jpg"]
 

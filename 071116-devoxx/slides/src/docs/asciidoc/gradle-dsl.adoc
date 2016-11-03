@@ -1,0 +1,42 @@
+== The Gradle Scripting Frontend
+
+Declarative Build scripts using a
+
+* Expressive DSL for describing builds
+* Extensible with own DSL elements (e.g. android)
+* based on Groovy
+
+=== Current limitations
+
+* DSL was not designed for performance
+* Tooling friendlyness
+* Bringing Patterns and techniques from application level to build level
+
+== Why Kotlin
+
+- Gradle team watching Kotlin over the years
+- Considerable uptake (particularly in the Android community).
+- Jetbrains and Gradle start discussing benefits of joining forces
+
+=== Enticing Oppertunities
+
+* Proper IDE support
+** Refactoring
+** Code completion
+* Crafting DSLs with ease
+** While keeping build scripts clean and declarative
+
+=== Kotlin language
+
+|===
+|  		                |
+|Expressive? 	        | Lambda expressions
+|                       | Lambdas with custom receiver
+|Readable?              | Extension members
+|                       | Delegated members
+|Concise & Declarative? | First class scripting
+|Higly Performant?      | Static typing
+|                       | Vanilla JVM execution model
+|                       | Inline functions
+|Tooling friendly?      | Deep IDE integration
+|===
