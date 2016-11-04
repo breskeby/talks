@@ -4,13 +4,34 @@ Declarative Build scripts using a
 
 * Expressive DSL for describing builds
 * Extensible with own DSL elements (e.g. android)
-* based on Groovy
+* Based on Groovy
+
+=== Extensible DSL
+
+[source,java]
+----
+android {
+    ...
+    defaultConfig {...}
+    buildTypes {...}
+    productFlavors {
+        demo {
+            applicationId "com.acme.myapp.demo"
+            versionName "1.0-demo"
+        }
+        full {
+            applicationId "com.acme.myapp.full"
+            versionName "1.0-full"
+        }
+    }
+}
+----
 
 === Current limitations
 
 * DSL was not designed for performance
 * Tooling friendlyness
-* Bringing Patterns and techniques from application level to build level
+* Limitations on bringing patterns and techniques from application level to build level
 
 == Why Kotlin
 
@@ -18,25 +39,60 @@ Declarative Build scripts using a
 - Considerable uptake (particularly in the Android community).
 - Jetbrains and Gradle start discussing benefits of joining forces
 
-=== Enticing Oppertunities
+=== Enticing Opportunities
 
 * Proper IDE support
-** Refactoring
 ** Code completion
+** Refactoring
+** Documentation lookup
 * Crafting DSLs with ease
 ** While keeping build scripts clean and declarative
 
-=== Kotlin language
+=== Gradle DSL vs. Kotlin features?
 
 |===
 |  		                |
-|Expressive? 	        | Lambda expressions
+|Expressiveness 	    | Lambda expressions
 |                       | Lambdas with custom receiver
-|Readable?              | Extension members
+|Readability            | Extension members
 |                       | Delegated members
-|Concise & Declarative? | First class scripting
-|Higly Performant?      | Static typing
+|Concise & Declarative  | First class scripting
+|Higly Performant       | Static typing
 |                       | Vanilla JVM execution model
 |                       | Inline functions
-|Tooling friendly?      | Deep IDE integration
+|Tooling friendly       | Deep IDE integration
 |===
+
+=== Design Constraints
+
+* Preserve the use of 800+ Gradle plugins
+* No magic: be transparent to tooling and users
+* Leverage idiomatic Kotlin
+* Ease of migration
+
+=== Challenges
+
+- From dynamic to static
+- Self referential build script
+
+=== Getting started with the Kotlin DSL
+[source,java]
+----
+//settings.gradle
+rootProject.buildFileName = 'build.gradle.kts'
+----
+
+=== Migrations
+
+* Mix Groovy and Kotlin build scripts
+
+=== Kotlin features
+
+=== Demo
+=== What's next
+
+- Catching up to stable DSL  (e.g. plugins {})
+- Performance: (compilation speed / script caching)
+- settings.gradle.kts?
+- Auto detect build.gradle.kts
+- Update mechanism

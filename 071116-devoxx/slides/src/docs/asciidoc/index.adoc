@@ -34,11 +34,10 @@ speaker {
     twitter '@breskeby'
     github 'breskeby'
     email 'rene@gradle.com'
-    hobbies '...'
 }
 ----
 
-== We'll look into
+== We'll look deeper into
 
 - Writing Gradle scripts with a Kotlin DSL
 
@@ -48,72 +47,9 @@ Not so much into
  - Writing Gradle plugins with Kotlin
 
 
+include::building-kotlin-project.adoc[]
+include::writing-gradle-plugins-in-kotlin.adoc[]
 include::gradle-dsl.adoc[]
-
-
-=== EMERGE FROM BUILD HELL
-
-[data-background="images/puzzle.jpg"]
-
-== What is Gradle?
-
-=== EMERGE FROM BUILD HELL
-
-* A Build Tool + Cloud Services
-* Unified, fast, reproducible builds
-* Cross-platform
-* Language agnostic
-
-=== The Groovy based Gradle DSL
-
-A simple java project
-
-[source,java]
-----
-apply plugin:"java"
-
-version = file("version.txt").text
-
-repositories {
-    jcenter()
-}
-
-dependencies {
-    testCompile "junit:junit:4.+"
-}
-
-task printVersion << { println "We're using - version '$version'!" }
-----
-
-== let's build a kotlin project
-== No big bang release
-
-* 3.0 released on August 15th 2016
-* 3.1 released on September 19th 2016
-* 3.2 RC-1 to be expected next week
-* Releasing every 4 - 6 weeks.
-
-include::continuous-builds.adoc[]
-
-include::testkit.adoc[]
-
-include::performance.adoc[]
-
-include::kotlin.adoc[]
-
-include::composite-builds.adoc[]
-
-include::task-output-cache.adoc[]
-
-include::build-scans.adoc[]
-
-== What's next
-
-* First class Java 9 Support (Jigsaw)
-* Distributed Cache
-* Gradle Script Kotlin 1.0
-* Ongoing dedicated performance work
-* Ongoing Buildship (Eclipse plugin) improvements
 
 == Gradle Inc
 
@@ -142,3 +78,5 @@ image::questions.jpg[canvas, size=cover]
 * Targeting android
 
 * https://youtrack.jetbrains.com/issue/KT-5756 (kotlin plugin to gradle plugins repository)
+
+** kotlin extension functions

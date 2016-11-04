@@ -1,0 +1,32 @@
+== Writing a Gradle plugin in Kotlin
+
+[source,java]
+----
+plugins {
+    id 'nebula.kotlin' version '1.0.4'
+}
+
+repositories {
+    mavenCentral() // or jcenter()
+}
+
+dependencies {
+    compile gradleApi()
+}
+----
+
+[source,java]
+----
+// src/main/kotlin/HelloWorldPlugin.kt
+package org.acme.gradle.plugin
+
+import org.gradle.api.Plugin
+import org.gradle.api.Project
+
+class HelloWorldPlugin : Plugin<Project> {
+    override fun apply(project: Project) {
+        project.tasks.create("helloWorld")
+            .doLast { println("Hello devoxx!"); }
+    }
+}
+----
