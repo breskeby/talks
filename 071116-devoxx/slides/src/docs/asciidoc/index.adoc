@@ -10,6 +10,8 @@ ifndef::sourcedir[:sourcedir: ../java]
 :adoctor: http://asciidoctor.org/[Asciidoctor]
 :gradle: http://gradle.org[Gradle]
 
+image::KotlinGradleBanner.gif[align="center"]
+
 == Who am I
 
 ++++
@@ -37,15 +39,11 @@ speaker {
 }
 ----
 
-== We'll look deeper into
+== We'll look into
 
-- Writing Gradle scripts with a Kotlin DSL
-
-Not so much into
-
- - Building Kotlin projects with Gradle
- - Writing Gradle plugins with Kotlin
-
+- Building Kotlin projects with Gradle (briefly)
+- Writing Gradle plugins with Kotlin (briefly)
+- Writing Gradle scripts with a Kotlin DSL (more deeply)
 
 include::building-kotlin-project.adoc[]
 include::writing-gradle-plugins-in-kotlin.adoc[]
@@ -65,18 +63,8 @@ image::questions.jpg[canvas, size=cover]
 
 == Thank you!
 
-* Slides and code : https://github.com/breskeby/talks/tree/master/181016-javabasel
+* Gradle-Script-Kotlin project: https://github.com/gradle/gradle-script-kotlin
+* Slides and code : https://github.com/breskeby/talks/tree/master/071116-devoxx/
 * Gradle documentation : http://gradle.org/documentation/
 * Gradle Build Scans : https://gradle.com
-* "Performance is a feature": https://gradle.org/blog/performance-is-a-feature/
-* Sample Gradle Build Scan: https://scans.gradle.com/s/53ttaumarrtog
-* Follow me: http://twitter.com/breskeby[@breskeby]
-
-== Notes
-
-* Targeting jvm
-* Targeting android
-
 * https://youtrack.jetbrains.com/issue/KT-5756 (kotlin plugin to gradle plugins repository)
-
-** kotlin extension functions

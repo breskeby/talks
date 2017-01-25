@@ -1,0 +1,72 @@
+[%notitle]
+== Kotlin Gradle DSL
+
+image::kotlinisland.jpg[canvas, size=cover]
+
+=== 4 facts about Kotlin
+
+- Statically typed JVM language
+- Developed by Jetbrains
+- Driven by pragmatism
+- Deep support in Idea and Eclipse IDEs
+
+=== Kotlin sample
+
+[source,java]
+----
+class Greeter(val name: String) {
+   fun greet() {
+      println("Hello, $name")
+   }
+}
+
+fun main(args: Array<String>) {
+   Greeter(args[0]).greet()
+}
+----
+
+=== Kotlin DSL in Gradle
+
+* Working closely with Jetbrains
+* M2 support in Gradle 3.0
+
+=== Kotlin in Gradle
+
+[source,java]
+----
+apply<ApplicationPlugin>()
+
+configure<ApplicationPluginConvention> {
+    mainClassName = "samples.HelloWorld"
+}
+
+configure<JavaPluginConvention> {
+    setSourceCompatibility(1.7)
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    testCompile("junit:junit:4.12")
+}
+----
+
+=== Kotlin in Gradle II
+
+[source,java]
+----
+val myTask = task("myTask") {
+    extra["foo"] = 42
+    doLast {
+        println("Extra property value: ${extra["foo"]}")
+    }
+}
+
+afterEvaluate {
+    println("myTask.foo = ${myTask.extra["foo"]}")
+}
+
+defaultTasks(myTask.name)
+----

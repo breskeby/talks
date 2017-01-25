@@ -1,0 +1,58 @@
+[%notitle]
+== Kotlin Gradle DSL
+
+image::kotlinisland.jpg[canvas, size=cover]
+
+=== Four facts about Kotlin
+
+* Statically typed JVM language
+* Driven by pragmatism
+* Deep support in Idea and Eclipse IDEs
+* Allows declarative syntax for crafting DSL with ease.
+
+=== Kotlin DSL in Gradle
+
+* Working closely with Jetbrains
+* 1.1-M03 support in Gradle 3.3
+* v0.7 in Gradle 3.4
+
+=== Kotlin in Gradle
+
+[source,java]
+----
+apply<ApplicationPlugin>()
+
+configure<ApplicationPluginConvention> {
+    mainClassName = "samples.HelloWorld"
+}
+
+configure<JavaPluginConvention> {
+    setSourceCompatibility(1.7)
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    testCompile("junit:junit:4.12")
+}
+----
+
+=== Kotlin in Gradle II
+
+[source,java]
+----
+val myTask = task("myTask") {
+    extra["foo"] = 42
+    doLast {
+        println("Extra property value: ${extra["foo"]}")
+    }
+}
+
+afterEvaluate {
+    println("myTask.foo = ${myTask.extra["foo"]}")
+}
+
+defaultTasks(myTask.name)
+----

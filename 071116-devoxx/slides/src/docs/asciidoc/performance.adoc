@@ -1,0 +1,47 @@
+== Whose build is too fast?
+
+=== Performance is a feature
+
+image::end-long-build-times.png[align="center"]
+
+=== Dedicated Performance Burst
+
+* Reduced configuration time
+* Faster script compilation
+* Faster up-to-date checks
+* Faster test execution
+* Faster IDE integration
+* Faster dependency resolution
+* Ongoing effort
+
+=== Configuration time speedup
+
+image::reduced-configuration-time.png[align="center"]
+
+=== Test execution speedup
+
+image::gradle-vs-maven-cleanTest-test.png[align="center"]
+
+=== Gradle daemon
+
+* A long-lived background process
+* Avoids costly jvm bootstrapping
+* Benefits from warmed up hotspot compilation
+
+=== More daemon goodness
+* On by default since 3.0
+* More robust by
+** Dealing better with memory leaks
+** Having clever expiration strategies
+* More communicative
+* Leveraging daemon more in the future
+
+
+=== Gradle daemon
+
+[source,text]
+----
+# for gradle < 3.0
+# ~/.gradle/gradle.properties
+org.gradle.daemon=true
+----

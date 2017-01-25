@@ -19,7 +19,7 @@
 
 [source]
 ----
-gradle biuld -t
+gradle build -t
 ----
 
 [NOTE.speaker]

@@ -1,0 +1,11 @@
+plugins {
+    id 'nebula.kotlin' version '1.0.4'
+}
+
+repositories {
+    mavenCentral() // or jcenter()
+}
+
+dependencies {
+    compile gradleApi()
+}

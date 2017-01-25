@@ -18,10 +18,6 @@ ifndef::sourcedir[:sourcedir: ../java]
   font-size: 16px;
 }
 </style>
-
-<div class="pictureWrapper">
-   <div class="picture"><img src="images/me-cropped.png"></div>
-</div>
 ++++
 
 
@@ -96,6 +92,7 @@ include::build-scans.adoc[]
 
 * First class Java 9 Support (Jigsaw)
 * Distributed Cache
+* Gradle Script Kotlin 1.0
 * Ongoing dedicated performance work
 * Ongoing Buildship (Eclipse plugin) improvements
 
@@ -116,5 +113,6 @@ image::questions.jpg[canvas, size=cover]
 * Slides and code : https://github.com/breskeby/talks/tree/master/181016-javabasel
 * Gradle documentation : http://gradle.org/documentation/
 * Gradle Build Scans : https://gradle.com
+* "Performance is a feature": https://gradle.org/blog/performance-is-a-feature/
 * Sample Gradle Build Scan: https://scans.gradle.com/s/53ttaumarrtog
 * Follow me: http://twitter.com/breskeby[@breskeby]

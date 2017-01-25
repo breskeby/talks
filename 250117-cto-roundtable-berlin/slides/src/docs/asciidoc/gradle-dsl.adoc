@@ -1,0 +1,161 @@
+== The Gradle Scripting Frontend
+
+Declarative Build scripts using a
+
+* Based on Groovy
+* Expressive DSL for describing builds
+* Extensible with own DSL elements (e.g. android)
+
+=== Extensible DSL
+
+[source,java]
+----
+android {
+    ...
+    defaultConfig {...}
+    buildTypes {...}
+    productFlavors {
+        demo {
+            applicationId "com.acme.myapp.demo"
+            versionName "1.0-demo"
+        }
+        full {
+            applicationId "com.acme.myapp.full"
+            versionName "1.0-full"
+        }
+    }
+}
+----
+
+=== Current limitations
+
+* DSL was not designed for performance
+* Tooling friendlyness
+* Limitations on bringing patterns and techniques from application level to build level
+
+== Kotlin in a nutshell
+
+- Statically typed
+- 1.0 released in 2016
+- Driven by pragmatism
+- Invented and maintained by Jetbrains
+- Considerable uptake (particularly in the Android community).
+
+=== Enticing Opportunities
+
+* Proper IDE support
+** Code completion
+** Refactoring
+** Documentation lookup
+* Crafting DSLs with ease
+** While keeping build scripts clean and declarative
+
+=== Gradle DSL vs. Kotlin features?
+
+|===
+|  		                |
+|Expressiveness 	    | Lambda expressions
+|                       | Lambdas with custom receiver
+|Readability            | Extension members
+|                       | Delegated members
+|Concise & Declarative  | First class scripting
+|Highly Performant      | Static typing
+|                       | Vanilla JVM execution model
+|                       | Inline functions
+|Tooling friendly       | Deep IDE integration
+|===
+
+=== Design Constraints
+
+* Preserve the use of 800+ Gradle plugins
+* No magic: be transparent to tooling and users
+* Leverage idiomatic Kotlin
+* Ease of migration
+
+== Challenges
+
+=== From dynamic to static
+[source,java]
+----
+apply plugin:'java'
+
+dependencies {
+    testCompile "junit:junit:4.10"
+}
+----
+
+=== From dynamic to static
+[source,java]
+----
+apply {
+    plugin("java")
+}
+
+dependencies {
+    "testCompile"("junit:junit:4.10")
+}
+----
+
+=== From dynamic to static
+[source,java]
+----
+apply {
+    plugin("java")
+}
+
+dependencies {
+    testCompile("junit:junit:4.10")
+}
+----
+
+----
+fun DependencyHandler.testCompile(dependencyNotation: Any) =
+    add("testCompile", dependencyNotation)
+----
+
+=== Self referential build script
+[source,java]
+----
+buildscript {
+    repositories {
+        maven {
+            setUrl("https://plugins.gradle.org/m2/")
+        }
+    }
+    dependencies {
+        classpath("gradle.plugin.org.samples:publish-sample:1.0")
+    }
+}
+
+task<GreetingTask>("greet"){
+    greeting = "hello"
+}
+----
+
+=== Gradle API patterns
+
+- Action<T>
+- Groovy Closures
+
+=== Maintaining multiple frontends
+
+* Catch up with latest Gradle features
+* Ease the migration
+* Preserve Gradle idioms
+
+== Getting started
+[source,java]
+----
+//settings.gradle
+rootProject.buildFileName = 'build.gradle.kts'
+----
+
+=== See Some code
+
+=== What's next
+
+- Catching up to stable DSL  (e.g. plugins {})
+- Performance: (compilation speed / script caching)
+- settings.gradle.kts?
+- Auto detect build.gradle.kts
+- Update mechanism

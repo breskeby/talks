@@ -26,7 +26,7 @@ import org.gradle.api.Project
 class HelloWorldPlugin : Plugin<Project> {
     override fun apply(project: Project) {
         project.tasks.create("helloWorld")
-            .doLast { println("Hello devoxx!"); }
+            .doLast { println("Hello Devoxx!"); }
     }
 }
 ----

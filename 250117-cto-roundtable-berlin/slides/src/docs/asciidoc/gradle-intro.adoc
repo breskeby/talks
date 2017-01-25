@@ -1,0 +1,42 @@
+== What is Gradle?
+
+=== EMERGE FROM BUILD HELL
+
+* Unified, fast, reproducible builds
+* Cross-platform
+* Language agnostic
+* A Build Tool + Cloud Services
+
+=== In a nutshell
+
+A simple java project
+
+[source,java]
+----
+apply plugin:"java"
+
+version = file("version.txt").text
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    testCompile "junit:junit:4.+"
+}
+
+task printVersion {
+    doLast {
+        println "We're building - version '$version'!"
+    }
+}
+----
+
+=== Demo
+
+=== No big bang release
+
+* 3.0 released on August 15th 2016
+* 3.3 released on January 3rd 2017
+* 3.4 RC-1 today
+* Releasing every 4 - 6 weeks.

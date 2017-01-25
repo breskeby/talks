@@ -1,0 +1,52 @@
+== TDD anybody?
+
+=== Ambitious automation can get complex
+
+=== Gradle TestKit
+
+Functional testing of your build logic
+
+[source,java]
+----
+apply plugin: 'groovy'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile localGroovy()
+    testCompile gradleTestKit()
+
+    testCompile('org.spockframework:spock-core:1.0-groovy-2.4') {
+        exclude module: 'groovy-all'
+    }
+}
+----
+
+=== Gradle TestKit
+
+[source,java]
+----
+def "helloWorld task prints hello world"() {
+    given:
+    buildFile << """
+        task helloWorld << {
+            println 'Hello world!'
+        }"""
+
+    when:
+    def result = GradleRunner.create()
+        .withProjectDir(testProjectDir)
+        .withArguments('helloWorld')
+        .build()
+
+    then:
+    result.output.contains('Hello world!')
+    result.task(":helloWorld").outcome == SUCCESS
+}
+----
+
+=== Gradle TestKit
+
+Demo

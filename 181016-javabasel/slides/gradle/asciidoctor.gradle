@@ -31,7 +31,7 @@ asciidoctor {
 	    'revealjs_history':'true',
         'revealjs_controls': 'false',
 	    'revealjs_slideNumber':'false',
-	    'revealjs_theme': 'javabasel.css',
+	    'revealjs_theme': 'javabasel',
             'examples': file("${projectDir}/examples")
 
     options template_dirs: [new File(templateDir, 'asciidoctor-reveal.js-master/templates/slim').absolutePath]

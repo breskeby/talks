@@ -1,0 +1,29 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+configurations {
+    all {
+        resolutionStrategy {
+            failOnVersionConflict()
+        }
+    }
+}
+dependencies {
+    compile 'org.slf4j:slf4j-api:1.7.21'
+
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.mockito:mockito-core:+'
+    testCompile 'org.hamcrest:hamcrest-core:1.2'
+}
+
+buildScan {
+    def joke = new groovy.json.JsonSlurper().parseText(new URL('http://api.icndb.com/jokes/random?firstName=Build&lastName=Scans').text).value.joke
+    value 'Punchline', joke
+
+    value 'Warning', 'Ensure updating direct hamcrest dependencies when using junit 4.12'
+}
