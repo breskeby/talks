@@ -1,0 +1,59 @@
+[%notitle]
+== Kotlin Gradle DSL
+
+image::kotlinisland.jpg[canvas, size=cover]
+
+=== Kotlin based Gradle DSL
+
+=== Kotlin (Management summary)
+
+- Statically typed
+- 1.0 released in 2016
+- Driven by pragmatism
+- Invented and maintained by Jetbrains
+- Considerable uptake (particularly in the Android community).
+
+=== Motivation
+
+* Current DSL was not designed for
+** performance
+** tooling friendlyness
+* Limitations on bringing patterns and techniques from application level to build level
+
+=== Enticing Opportunities
+
+* Proper IDE support
+** Code completion
+** Refactoring
+** Documentation lookup
+* Crafting DSLs with ease
+** While keeping build scripts clean and declarative
+
+=== Current state
+
+* Working closely with Jetbrains
+* 1.1-M03 support in Gradle 3.3
+* v0.7 in Gradle 3.4
+
+=== Kotlin in Gradle
+
+[source,java]
+----
+apply<ApplicationPlugin>()
+
+configure<ApplicationPluginConvention> {
+    mainClassName = "samples.HelloWorld"
+}
+
+configure<JavaPluginConvention> {
+    setSourceCompatibility(1.7)
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    testCompile("junit:junit:4.12")
+}
+----

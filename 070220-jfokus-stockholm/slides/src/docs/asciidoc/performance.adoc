@@ -1,0 +1,21 @@
+== Whose build is too fast?
+
+=== Performance is a feature
+
+image::end-long-build-times.png[align="center"]
+
+== Dedicated Performance Team
+
+* Faster test execution
+* Faster IDE integration
+* Faster dependency resolution
+* Ongoing effort
+
+=== Gradle daemon
+
+* A long-lived background process
+* Avoids costly jvm bootstrapping
+* Benefits from warmed up hotspot compilation
+* On by default since 3.0
+* More communicative
+* Leveraging daemon more in the future

@@ -1,0 +1,33 @@
+== Compile avoidance
+
+=== so far
+
+- Task up-to-date check been there forever
+- Relies on tasks inputs/outputs model
+
+=== We can do better
+
+=== Better compile avoidance
+
+- Gradle now detects *ABI* changes
+- Dramatically improves incremental build performance
+
+=== Demo
+
+=== More java goodness in 3.4
+
+* Better incremental java compiler
+** Working on making incremental compilation default
+* *java-library plugin*
+** less classpath leakage
+** better poms than maven
+
+[source,java]
+----
+apply plugin:'java-library'
+
+dependencies {
+   api 'org.apache.commons:commons-math3:3.6.1'
+   implementation 'com.google.guava:guava:21.0'
+}
+----

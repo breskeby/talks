@@ -1,0 +1,23 @@
+== Composite builds
+
+=== Composite Builds
+
+Defined in a `settings.gradle` file:
+
+[source]
+----
+// settings.gradle
+rootProject.name='adhoc'
+
+includeBuild '../my-app'
+includeBuild '../my-utils'
+----
+
+Or passed via command line argument:
+
+[source]
+----
+> gradle --include-build ../my-utils run
+----
+
+=== Demo

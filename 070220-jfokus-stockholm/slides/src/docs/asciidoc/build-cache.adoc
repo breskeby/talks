@@ -1,0 +1,42 @@
+== Talking about up-to-date checks...
+
+=== We are reusing results...
+
+from *last time*  +
+when we ran *this build* +
+ on *this machine*. +
+
+=== We can do better
+
+=== Why not...
+
+from *anytime before*  +
+when we ran *any build* +
+ *anywhere*. +
+
+=== Build Cache (*WIP*)
+
+[%step]
+[source,text]
+----
+> gradle clean logging:assemble
+...
+:native:classpathManifest
+:native:compileJava FROM-CACHE
+:native:compileGroovy UP-TO-DATE
+:native:processResources UP-TO-DATE
+:native:classes
+:native:jar CACHED
+:logging:compileJava FROM-CACHE
+:logging:compileGroovy UP-TO-DATE
+:logging:processResources UP-TO-DATE
+:logging:classes
+:logging:jar FROM-CACHE
+:logging:assemble UP-TO-DATE
+
+BUILD SUCCESSFUL
+----
+
+=== Build Cache in Action
+
+Demo
