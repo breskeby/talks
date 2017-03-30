@@ -1,0 +1,93 @@
+= Gradle heading 4.0
+:revnumber: {project-version}
+:example-caption!:
+ifndef::imagesdir[:imagesdir: images]
+ifndef::sourcedir[:sourcedir: ../java]
+:deckjs_transition: fade
+:navigation:
+:menu:
+:status:
+:adoctor: http://asciidoctor.org/[Asciidoctor]
+:gradle: http://gradle.org[Gradle]
+
+== Who am I
+
+++++
+<style>
+.asciinema-terminal.font-medium {
+  font-size: 16px;
+}
+</style>
+
+<div class="pictureWrapper">
+    <div class="picture"><img src="images/me-cropped.png"></div>
+</div>
+++++
+
+
+[source,groovy]
+----
+speaker {
+    name 'René Gröschke'
+    homebase 'Berlin, Germany'
+    work 'Principal Engineer @ Gradle Inc.'
+    twitter '@breskeby'
+    github 'breskeby'
+    email 'rene@gradle.com'
+}
+----
+
+== We'll look into
+
+- Latest features
+- Next features
+- Demos
+- [line-through]#Q&A#
+- *STICKERS*!
+
+include::gradle-overview.adoc[]
+
+## latest features
+
+include::kotlin.adoc[]
+
+include::performance.adoc[]
+
+include::composite-builds.adoc[]
+
+include::java-goodness.adoc[]
+
+include::build-cache.adoc[]
+
+== Misc
+
+* Improved Plugin API
+* New Gradle Console
+* Public Worker API
+* Parallel by default
+* Plugin portal improvements
+* ...
+
+include::build-scans.adoc[]
+
+== Gradle Inc
+
+*Motto*: Build Happiness
+
+*Mission*: To revolutionize the way software is built and shipped.
+
+*We’re Hiring*: Gradle is hiring front-end, back-end, and core software engineers. Visit https://gradle.org/jobs[gradle.org/jobs] to apply.
+
+[%notitle]
+== Questions
+image::questions.jpg[canvas, size=cover]
+
+== Thank you!
+
+== Links
+* Gradle Kotlin Javaland talk: https://programm.javaland.eu/2017/talk.html#talk?talkId=529705
+* Android Gradle Plugin improvements: http://tools.android.com/tech-docs/new-build-system/2-5-alpha-gradle-plugin
+* Compiler improvements in Gradle: https://blog.gradle.org/incremental-compiler-avoidance
+* Gradle Build Cache: https://docs.gradle.org/nightly/userguide/userguide_single.html#build_cache
+* Gradle Build Scans : https://gradle.com
+* Slides and code : https://github.com/breskeby/talks/tree/master/280317-javaland-bruehl/

@@ -1,0 +1,34 @@
+== Composite builds
+
+=== Composite Builds
+
+Have you ever (tried | suffered from | failed on)
+
+* including an external project into your build for debugging?
+* moving separated projects into a big mono repo to make dev life easier?
+* to test your gradle plugins in dev against real projects?
+
+=== Composite Builds to the rescue
+
+=== Composite Builds
+
+Defined in the command line:
+
+[source]
+----
+> gradle --include-build ../my-utils run
+----
+
+Or persistently
+
+[source]
+----
+// settings.gradle
+rootProject.name='adhoc'
+
+includeBuild '../my-app'
+includeBuild '../my-utils'
+----
+
+
+=== Demo

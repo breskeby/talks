@@ -1,0 +1,68 @@
+[%notitle]
+== Kotlin Gradle DSL
+
+image::kotlinisland.jpg[canvas, size=cover]
+
+[NOTE.speaker]
+--
+Kotlin-based Build Scripts: New Opportunities in Gradle 3.0
+
+Tim Riemers
+
+https://programm.javaland.eu/2017/talk.html#talk?talkId=529705
+--
+
+=== Kotlin based Gradle DSL
+
+=== Motivation
+
+* Current DSL was not designed for
+** performance
+** tooling friendlyness
+* Limitations on bringing patterns and techniques from application level to build level
+
+=== Kotlin (Management summary)
+
+- Statically typed
+- 1.0 released in 2016
+- Driven by pragmatism
+- Invented and maintained by Jetbrains
+- Considerable uptake (particularly in the Android community).
+
+=== Enticing Opportunities
+
+* Proper IDE support
+** Code completion
+** Refactoring
+** Documentation lookup
+* Crafting DSLs with ease
+** While keeping build scripts clean and declarative
+
+=== Current state
+
+* Working closely with Jetbrains
+* Kotlin 1.1.0 support in Gradle 3.5-rc-2
+* v0.8 in Gradle 3.5-rc-2
+
+=== Kotlin in Gradle
+
+[source,java]
+----
+apply<ApplicationPlugin>()
+
+configure<ApplicationPluginConvention> {
+    mainClassName = "samples.HelloWorld"
+}
+
+configure<JavaPluginConvention> {
+    setSourceCompatibility(1.7)
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    testCompile("junit:junit:4.12")
+}
+----

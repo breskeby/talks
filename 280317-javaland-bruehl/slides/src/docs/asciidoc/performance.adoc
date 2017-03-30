@@ -1,0 +1,28 @@
+== Whose build is too fast?
+
+=== Performance is a feature
+
+image::end-long-build-times.png[align="center"]
+
+=== Dedicated Performance Team
+
+* Better Android dev experience
+* Faster dependency resolution
+* Lower configuration time
+
+=== Some Numbers
+
+|===
+|AGP version + Gradle version |AGP 2.2.0 + Gradle 2.14.1 |AGP 2.3 RC1 + Gradle 3.3 |AGP 2.5 Alpha + Gradle Nightly
+
+|Configuration (i.e. help)
+|~2 mins
+|~9 s
+|~2.5 s
+
+
+|1-line Java change (implementation change)
+|~2 mins 15 s
+|~29 s
+|~6.4 s
+|===
