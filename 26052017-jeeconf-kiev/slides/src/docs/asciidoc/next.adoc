@@ -1,0 +1,7 @@
+== What's next
+
+* Continuoued dedicated performance team
+* Kotlin Gradle scripting 1.0
+* First-class integration with high-impact plugins
+* Remote Builds
+* ...

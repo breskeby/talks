@@ -1,0 +1,85 @@
+= Gradle 4.0
+:revnumber: {project-version}
+:example-caption!:
+ifndef::imagesdir[:imagesdir: images]
+ifndef::sourcedir[:sourcedir: ../java]
+:deckjs_transition: fade
+:navigation:
+:menu:
+:status:
+:adoctor: http://asciidoctor.org/[Asciidoctor]
+:gradle: http://gradle.org[Gradle]
+
+== Who am I
+
+++++
+<style>
+.asciinema-terminal.font-medium {
+  font-size: 16px;
+}
+</style>
+
+<div class="pictureWrapper">
+    <div class="picture"><img src="images/me-cropped.png"></div>
+</div>
+++++
+
+
+[source,groovy]
+----
+speaker {
+    name 'René Gröschke'
+    homebase 'Berlin, Germany'
+    work 'Principal Engineer @ Gradle Inc.'
+    twitter '@breskeby'
+    github 'breskeby'
+    email 'rene@gradle.com'
+}
+----
+
+== We'll look into
+
+- Latest features
+- Next features
+- Demos
+- [line-through]#Q&A#
+- *STICKERS*!
+
+include::gradle-overview.adoc[]
+
+## latest features
+
+include::kotlin.adoc[]
+
+include::performance.adoc[]
+
+include::composite-builds.adoc[]
+
+include::java-goodness.adoc[]
+
+include::build-cache.adoc[]
+
+include::build-scans.adoc[]
+
+== Misc
+
+* Improved plugin API
+* New Gradle Console
+* Public Worker API
+* Parallel by default
+* ...
+
+include::next.adoc[]
+
+[%notitle]
+== Questions
+image::questions.jpg[canvas, size=cover]
+
+== Thank you!
+
+== Links
+* Speed up Your Android Gradle Builds (Google I/O '17):
+  https://www.youtube.com/watch?v=7ll-rkLCtyk
+* Gradle Blog: https://blog.gradle.org/
+* Gradle Build Scans: https://gradle.com
+* Slides and code: http://bit.ly/2qizRlZ

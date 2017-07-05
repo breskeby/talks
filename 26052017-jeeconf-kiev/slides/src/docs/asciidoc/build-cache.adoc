@@ -1,0 +1,51 @@
+== Talking about up-to-date checks...
+
+=== Gradle is reusing results...
+
+from *last time*  +
+when we ran *this build* +
+ on *this machine*. +
+
+=== Gradle can do better
+
+=== Why not...
+
+from *anytime before*  +
+when we ran *any build* +
+ *anywhere*. +
+
+=== Build Cache
+
+[%step]
+[source,text]
+----
+$> gradle --build-cache assemble
+Build cache is an incubating feature.
+Using directory (/Users/rene/.gradle/caches/build-cache-1) as local build cache, push is enabled.
+:compileJava FROM-CACHE
+:processResources
+:classes
+:jar
+:assemble
+
+BUILD SUCCESSFUL
+----
+
+=== Distributed Build Cache
+
+[%step]
+[source,text]
+----
+// settings.gradle
+ext.isCiServer = System.getenv().containsKey("CI")
+
+buildCache {
+    local {
+        enabled = !isCiServer
+    }
+    remote(HttpBuildCache) {
+        url = 'https://example.com:8123/build-cache/'
+        push = isCiServer
+    }
+}
+----

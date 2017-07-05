@@ -1,0 +1,16 @@
+== Whose build is too fast?
+
+=== Performance is a feature
+
+image::end-long-build-times.png[align="center"]
+
+=== Dedicated Performance Team
+
+* Better Android dev experience
+* Faster dependency resolution
+* Lower configuration time
+
+[%notitle]
+=== Android Performance
+
+image::android-performance.png[canvas, size=cover]

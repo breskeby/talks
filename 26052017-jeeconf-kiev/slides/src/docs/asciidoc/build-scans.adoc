@@ -1,0 +1,61 @@
+== Talking about builds
+
+image:Swear-Blue.png[width=75%, height=75%]
+
+=== Wouldn't it be nice if we could...
+
+=== Collaborate
+
+image:collaboration.svg[width=100%, height=50%]
+
+...easily share builds to debug issues together?
+
+=== Optimize Build Performance
+
+image:Performance.svg[width=100%, height=50%]
+
+...easily understand where our build time is going and make our builds faster?
+
+=== Compare
+
+image:CompareAndDiscover.svg[width=80%, height=50%]
+
+...compare builds within our entire organization?
+
+=== Discover
+
+image:Insights.svg[width=100%, height=50%]
+
+...discover
+
+* how our software is actually being built within our entire organization?
+* where our build time is going and make our builds faster?
+
+=== Introducing Gradle Build Scans
+
+[cols="50a,50a"]
+|===
+|
+* Insights into your build
+* View and share via URL
+* Debug, optimize and refine
+* Communicate via builds
+* Analyze all of your builds
+
+|image:sample-scan.png[]
+|===
+
+[NOTE.speaker]
+--
+- working closely with android team to add android specific stuff
+--
+
+[%notitle]
+=== Build Scan Projects
+
+image::build-scan-projects.png[canvas, size=cover]
+
+=== Gradle Build Scans
+
+Try Gradle build scans yourself!
+https://gradle.com/scans/get-started
