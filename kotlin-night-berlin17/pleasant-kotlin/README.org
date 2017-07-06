@@ -1,0 +1,35 @@
+* Gradle Summit 2017 - Pleasant Build Script Authoring with Kotlin
+
+A [[https://summit.gradle.com/conference/palo_alto/2017/06/session?id=39247][Gradle summit presentation]] based on [[https://github.com/asciidoctor/asciidoctor-reveal.js#syntax-examples][asciidoctor-revealjs]] based presentation.
+
+*Open the [[https://bamboo.github.io/summit-2017-pleasant-authoring/][slides]].*
+
+** Setup
+
+#+BEGIN_SRC
+
+./gradlew jrubyPrepare
+
+#+END_SRC
+
+** Build
+
+#+BEGIN_SRC
+
+./gradlew asciidoctor
+
+#+END_SRC
+
+** View
+
+Open [[./build/asciidoc/revealjs/index.html][the resulting presentation]].
+
+** Continuous mode
+
+#+BEGIN_SRC
+
+./gradlew asciidoctor -t
+
+#+END_SRC
+
+** TODO

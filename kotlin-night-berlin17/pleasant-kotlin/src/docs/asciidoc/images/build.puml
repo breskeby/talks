@@ -1,0 +1,51 @@
+@startuml
+skinparam sequence {
+    ArrowThickness 2
+    ArrowColor #00C489
+
+	ParticipantBorderColor #00C489
+	ParticipantBackgroundColor White
+	ParticipantFontColor #02303A
+
+    ActorBorderColor #00C489
+	ActorBackgroundColor White
+	ActorFontColor #02303A
+	ActorFontSize 17
+
+	LifeLineBorderColor #02303A
+}
+
+title Running a build
+hide footbox
+
+actor User as U
+participant Gradle as G
+participant "Kotlin DSL" as K
+
+U -> G: ./gradlew build
+
+== Initialization phase ==
+
+...
+
+G -> G: Finds `build.gradle.kts`
+== Configuration phase ==
+
+|||
+G -> K: Apply `build.gradle.kts`
+group Build script dependencies
+    K -> K: Extracts, compiles and executes `buildscript` block
+    K -> K: Extracts, compiles and executes `plugins` block
+end
+|||
+K -> K: Assemble dynamic model accessors
+K -> K: Compiles and executes the body of `build.gradle.kts`
+|||
+
+== Execution phase ==
+
+...
+
+G -> U: BUILD SUCCESSFUL
+
+@enduml

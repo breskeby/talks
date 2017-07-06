@@ -1,0 +1,6 @@
+=== Rene Groeschke
+
+* Principal Engineer at Gradle Inc.
+* Opensource enthusiast
+* based in Berlin
+* rene@gradle.com / @breskeby

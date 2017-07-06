@@ -1,0 +1,3 @@
+rootProject.name = "kotlin-dsl-samples"
+include ":hello-world"
+include ":groups"

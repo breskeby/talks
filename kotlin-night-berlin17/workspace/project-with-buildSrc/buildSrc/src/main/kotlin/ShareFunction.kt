@@ -1,0 +1,2 @@
+fun answerTheUltimateQuestionAboutLifeTheUniverseAndEveryting() =
+        42

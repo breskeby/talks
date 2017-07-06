@@ -1,0 +1,51 @@
+@startuml
+skinparam sequence {
+    ArrowThickness 2
+    ArrowColor #00C489
+
+	ParticipantBorderColor #00C489
+	ParticipantBackgroundColor White
+	ParticipantFontColor #02303A
+
+    ActorBorderColor #00C489
+	ActorBackgroundColor White
+	ActorFontColor #02303A
+	ActorFontSize 17
+
+	LifeLineBorderColor #02303A
+
+	BoxBorderColor #02303A
+	BoxBackgroundColor #e5fff7
+}
+
+title Authoring a build script
+hide footbox
+
+actor User as U
+participant IDE as I
+box "Gradle"
+    participant "Kotlin DSL\nClient" as K
+    participant "Kotlin DSL\nServer" as G
+end box
+
+U -> I: Opens\n`build.gradle.kts` file
+I -> K: Resolves the classpath
+K -> G: Queries classpath model\nover TAPI
+
+group Classpath computation
+    |||
+    group Build script dependencies
+        G -> G: Extracts, compiles and executes `buildscript` block
+        G -> G: Extracts, compiles and executes `plugins` block
+    end
+    |||
+    G -> G: Assemble dynamic model accessors
+    G -> G: Compiles and executes the body of `build.gradle.kts`
+    |||
+end
+
+G -> K: Classpath model
+K -> I: Classpath IDE model
+I -> U: Highlights\n`build.gradle.kts`
+
+@enduml
