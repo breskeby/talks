@@ -1,8 +1,0 @@
-
-=== Rodrigo B. de Oliveira
-
-* Principal Engineer at Gradle Inc.
-* Gradle Kotlin DSL Project Lead
-* Code Gardener
-* Drummer (http://dogandpoka.com/en/index.html)
-* Cat Hoarder

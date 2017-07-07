@@ -1,4 +1,4 @@
-= Pleasant Build Script Authoring with Kotlin
+= The Kotlin DSL experience in Gradle
 Rene Groeschke
 2017-07-06
 :title-slide-background-image: title.jpeg
@@ -21,6 +21,8 @@ ifndef::sourcedir[:sourcedir: ../java]
 * https://www.youtube.com/watch?v=_QaECMYonhk&t=548[René's talk at Devoxx Belgium 2016]
 --
 
+Pleasant Build Script Authoring with Kotlin
+
 [NOTE.speaker]
 --
 Hi! Good evening everyone. Thanks for coming.
@@ -30,8 +32,15 @@ Hi! Good evening everyone. Thanks for coming.
 
 * Principal Engineer at Gradle Inc.
 * Opensource enthusiast
-* based in Berlin
+* Based in Berlin
 * rene@gradle.com / @breskeby
+
+== Agenda
+
+* Motivation
+* Aspects of Pleasant Build Script Authoring
+* Challenges
+* What's next
 
 == Who are you?
 
@@ -148,7 +157,7 @@ different plugins that extend functionality
 - `application` plugin & its extension
 --
 
-== Organizing build logic
+=== Organizing build logic
 
 [%step]
 - To take the most advantage of the IDE
@@ -223,14 +232,14 @@ different plugins that extend functionality
 --
 --
 
-[%notitle]
-=== Without an IDE
-
-image::build.svg[background, size=contain]
-
-[NOTE.speaker]
---
---
+// [%notitle]
+// === Without an IDE
+//
+// image::build.svg[background, size=contain]
+//
+// [NOTE.speaker]
+// --
+// --
 
 [%notitle]
 === From an IDE
@@ -241,46 +250,44 @@ image::ide.svg[background, size=contain]
 --
 --
 
+//
+// == What's next?
+// [%step]
+// * *Deprecate the `buildscript` block in favor of the `plugins` block*
+// [%step]
+// ** Allow plugins to declare api dependencies
+// ** Allow script plugins to declare plugin dependencies
+// ** Allow to apply script plugins from the `plugins` block
+// ** Make community plugins available inside corporate environments
+// ** Make the `plugins` block work across included builds in a composite build
+//
+// [NOTE.speaker]
+// --
+// - high on the list of our priorities
+// - any contribution to the dynamic model is taken into account
+// --
+
+// == What's next?
+// * Deprecate the `buildscript` block in favor of the `plugins` block
+// * *Streamline build logic organization*
+// [%step]
+// ** Kotlin compiler plugins (allopen, ???)
+// ** Share external plugin configuration code
+//
+// [NOTE.speaker]
+// --
+// --
 
 == What's next?
-[%step]
-* *Deprecate the `buildscript` block in favor of the `plugins` block*
-[%step]
-** Allow plugins to declare api dependencies
-** Allow script plugins to declare plugin dependencies
-** Allow to apply script plugins from the `plugins` block
-** Make community plugins available inside corporate environments
-** Make the `plugins` block work across included builds in a composite build
-
-[NOTE.speaker]
---
-- high on the list of our priorities
-- any contribution to the dynamic model is taken into account
---
-
-=== What's next?
-* Deprecate the `buildscript` block in favor of the `plugins` block
-* *Streamline build logic organization*
-[%step]
-** Kotlin compiler plugins (allopen, ???)
-** Share external plugin configuration code
-
-[NOTE.speaker]
---
---
-
-=== What's next?
 * Deprecate the `buildscript` block in favor of the `plugins` block
 * Streamline build logic organization
 * *Documentation*
-[%step]
 ** Kotlin DSL API documentation
 *** https://gradle.github.io/kotlin-dsl-docs/api/
 ** Kotlin snippets in the Gradle user manual and guides
 
 [NOTE.speaker]
 --
-*Rodrigo*
 --
 
 == Call to action
@@ -302,12 +309,23 @@ image::ide.svg[background, size=contain]
 == Questions?
 
 ----
-// Slides and code
-// https://github.com/bamboo/summit-2017-pleasant-authoring
-//
+Slides and code
+http://bit.ly/gradle-at-kotlin-night-berlin
+
 Gradle Kotlin DSL
 https://github.com/gradle/kotlin-dsl
+
+Free Gradle Training
+https://gradle.org/training/intro-to-gradle-ger/
 ----
+
+== We're hiring!
+
+* Enjoy crafting developer tools?
+* Enjoy working in distributed teams?
+* Enjoy "making the world a better place"? 🤦🏻‍♂️
+
+https://gradle.com/careers
 
 
 [%notitle]
