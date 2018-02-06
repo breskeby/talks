@@ -1,0 +1,17 @@
+initscript {
+    repositories {
+        maven { url 'https://plugins.gradle.org/m2' }
+    }
+    dependencies {
+        classpath 'com.gradle:build-scan-plugin:1.11'
+    }
+}
+
+rootProject {
+    apply plugin: com.gradle.scan.plugin.BuildScanPlugin
+
+    buildScan {
+        server = 'https://xghuphxnocv2vyf5pkfmwfus2m-trial.gradle.com'
+        publishAlways()
+    }
+}
